@@ -1,4 +1,7 @@
-var Port = process.env.Port ||4567;
+const Port = process.env.Port || 4567;
+//process.env.TEST = Port;
+//console.log(process.env.TEST);
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const graphqlHttp = require('express-graphql');
@@ -29,9 +32,18 @@ mongoose
 
    )
   .then(() => {
-    app.listen(Port);
-    console.log('ok conn  localhost:Port/grapghql : ' +Port);
+	  
+	  const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
+
+    //app.listen(PORT);
+    //console.log('ok conn  localhost:Port/grapghql : {PORT} ' + process.env.PORT);
+	//app.listen(PORT, () => { console.log(`Our app is running on port ' + PORT ); }
+	//);
+	
   })
   .catch(err => {
-    console.log( 'rr in onn' +err);
+    console.log( 'errer in conn  ' +err);
   });
