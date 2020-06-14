@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +15,7 @@
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "graphql": "^14.0.2",
-    "mongoose": "^5.9.14",
+    "mongoose": "^5.9.18",
     "save": "^2.4.0"
   },
   "devDependencies": {

@@ -1,1 +1,18 @@
-afsfs
+npm start ---- >  "start" : "nodemon app.js"  ---> http://localhost:4567/graphql
+npm start = node app.js 
+
+for hereku deployment 
+
+
+
+
+follow the steps from heruku site 
+
+after deployment you will see error page ,
+
+then follow 
+
+ Deploy your first App with Heroku and Node.js
+
+https://www.youtube.com/watch?v=MxfxiR8TVNU
+=========================
