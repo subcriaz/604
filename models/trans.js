@@ -1,43 +1,48 @@
 const mongoose = require('mongoose');
+							
 
 const Schema = mongoose.Schema;
 
-const attSchema = new Schema({
+const transSchema = new Schema({
   
-  attuserid: {
-    type: String,
-    required: true
-  },
-  attdate: {
-    type: String,
-    required: true
-  },
-  atttime: {
+  trans_userid	: {
     type: String,
     required: true
   }
-  ,
-  atttype: {
+  ,trans_date: {
     type: String,
     required: true
-  },
-  attsms: {
+  }
+  ,trans_time: {
     type: String,
     required: true
-  },
-  attsmssent: {
+  }
+  ,trans_type: {
     type: String,
     required: true
-  },
-  attcreatedon: {
+  }
+  ,trans_amount: {
     type: String,
     required: true
-  },
-  attcreatedby: {
+  }
+  
+  ,trans_sms: {
+    type: String,
+    required: true
+  }
+  ,trans_sms_sent: {
+    type: String,
+    required: true
+  }
+  ,trans_createdon: {
+    type: String,
+    required: true
+  }
+  ,trans_createdby: {
     type: String,
     required: true
   }
   
 });
 
-module.exports = mongoose.model('Att', attSchema);
+module.exports = mongoose.model('Trans', transSchema);
