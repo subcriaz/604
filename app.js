@@ -14,6 +14,18 @@ const app = express();
 
 app.use(bodyParser.json());
 
+// added on 21 June 2020 ////////////////
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST,GET,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
+  next();
+});
+// added on 21 June 2020 ////////////
+
 app.use(
   '/graphql',
   graphqlHttp({
@@ -33,7 +45,7 @@ mongoose
    )
   .then(() => {
 	  
-	  const PORT = process.env.PORT || 3000;
+	  const PORT = process.env.PORT || 4567;
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
